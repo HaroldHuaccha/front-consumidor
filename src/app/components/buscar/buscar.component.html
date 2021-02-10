@@ -1,0 +1,34 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <div >
+                <table class="table" >
+                    <tr >
+
+                        <td>ID</td>
+                    
+                        <td>Nombres</td>
+                    
+                        <td>Apellidos</td>
+
+                        <td>DNI</td>
+                    
+                      </tr>
+                    
+                      <tr *ngFor="let compra of compras">
+                    
+                        <td>{{compra.id}}</td>
+                    
+                        <td>{{compra.nombres}}</td>
+                    
+                        <td>{{compra.apellidos}}</td>
+
+                        <td>{{compra.dni}}</td>
+                    
+                      </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary float-right" routerLink="/formulario"> Ir a dejar un mensaje</button>
+</div>

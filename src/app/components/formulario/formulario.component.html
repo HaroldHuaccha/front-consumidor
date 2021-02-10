@@ -1,0 +1,68 @@
+<!-- <div class="container">
+ 
+    <div class="starter-template">
+
+      <div class="row">      	
+
+        <div class="col-md-12 mt-5">
+
+        <h1>{{ titulo }} </h1>
+    
+        <form [formGroup]="contacto" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Nombres y Apellidos</label>
+                    <input type="text" formControlName="nya" class="form-control" />
+                    <div  class="invalid-feedback">
+                        <div *ngIf="f.nya.errors.required">Por favor, ingresa tus Nombres y Apellidos</div>
+                    </div>
+                </div>                    
+                
+                <div class="form-group">
+                    <button  class="btn btn-primary">Aceptar</button>
+                </div>
+     
+            </form>
+
+      </div>
+
+
+  </div>
+
+ </div>
+
+</div> -->
+
+<div class="col-md-4 offset-md-2">
+    <div class="text-center h3">Déjanos un mensaje</div>
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label>Documento de Identidad</label>
+                    <input type="number" name="dni" [(ngModel)]="compra.dni" placeholder="Dni" class="form-control">
+                </div>
+                <button class="btn btn-primary float-right mb-5" (click)="buscarDni()">Buscar DNI</button>
+                
+                <label class="mt-5">Nombres</label>
+                <div class="form-group">
+                    <input type="text" name="nombres" [(ngModel)]="compra.nombres" class="form-control" disabled>
+                </div>
+                
+                <label>Apellidos</label>
+                <div class="form-group">
+                    <input type="text" name="apellidos" [(ngModel)]="compra.apellidos" class="form-control" disabled>
+                </div>
+
+                <label>Mensaje</label>
+                <div class="form-group">
+                    <input type="text" name="mensaje" [(ngModel)]="compra.mensaje" class="form-control">
+                </div>
+
+                <button  class="btn btn-primary float-right" (click)="guardarCompra()">Enviar</button>
+
+            </form>
+        </div>
+    </div>
+    <button class="btn btn-danger float-right" routerLink="/buscar"> Regresar</button>
+
+</div>
